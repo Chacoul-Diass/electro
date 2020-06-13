@@ -109,8 +109,8 @@
                                             </div>
                                             <p>{{ article.description }}</p>
                                             <div class="flex-horizontal-center">
-                                                <a href="{% url 'article' %}" class="btn btn-soft-secondary-w mb-md-0 font-weight-normal px-5 px-md-4 px-lg-5">Voir plus</a>
-                                                <a href="{% url 'article' %}" class="font-size-12 text-gray-5 ml-4"><i class="far fa-comment"></i>Laisser un commentaire</a>
+                                                <a href="{% url 'article' var=article|slugify %}" class="btn btn-soft-secondary-w mb-md-0 font-weight-normal px-5 px-md-4 px-lg-5">Voir plus</a>
+                                                <a href="{% url 'article' var=article|slugify  %}" class="font-size-12 text-gray-5 ml-4"><i class="far fa-comment"></i>Laisser un commentaire</a>
                                             </div>
                                         </div>
                                     </article>
