@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'electro.apps.ElectroConfig',
+
+    #Appliction 
+    'shop.apps.ShopConfig',
     'blog.apps.BlogConfig',
 ]
 
