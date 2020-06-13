@@ -379,19 +379,19 @@
 
                                             <!-- About us -->
                                             <li class="nav-item u-header__nav-item">
-                                                <a class="nav-link u-header__nav-link" href="about.html">About us</a>
+                                                <a class="nav-link u-header__nav-link" href="{% url 'about' %}">About </a>
                                             </li>
                                             <!-- End About us -->
 
                                             <!-- FAQs -->
                                             <li class="nav-item u-header__nav-item">
-                                                <a class="nav-link u-header__nav-link" href="faq.html">FAQs</a>
+                                                <a class="nav-link u-header__nav-link" href="{% url 'faq' %}">FAQs</a>
                                             </li>
                                             <!-- End FAQs -->
 
                                             <!-- Contact Us -->
                                             <li class="nav-item u-header__nav-item">
-                                                <a class="nav-link u-header__nav-link" href="contact-v1.html">Contact Us</a>
+                                                <a class="nav-link u-header__nav-link" href="{% url 'contact' %}">Contact</a>
                                             </li>
                                             <!-- End Contact Us -->
                                         </ul>
@@ -407,11 +407,11 @@
                                     <i class="ec ec-support font-size-50 text-primary"></i>
                                     <div class="ml-2">
                                         <div class="phone">
-                                            <strong>Support</strong> <a href="tel:800856800604" class="text-gray-90">(+800) 856 800 604</a>
+                                            <strong>Support</strong> <a href="tel:800856800604" class="text-gray-90">88 93 86 60/ 89 32 26 30</a>
                                         </div>
                                         <div class="email">
-                                            E-mail: <a href="mailto:info@electro.com?subject=Help Need" class="text-gray-90">info@electro.com</a>
-                                        </div>
+                                            E-mail: <a href="mailto:teamNaN@electro.com?subject=Help Need" class="text-gray-90">teamNaN@electro.com</a>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
@@ -1425,10 +1425,10 @@
                                         <li><a class="list-group-item list-group-item-action" href="../shop/my-account.">My Account</a></li>
                                         <li><a class="list-group-item list-group-item-action" href="../shop/track-your-order.">Order Tracking</a></li>
                                         <li><a class="list-group-item list-group-item-action" href="../shop/wishlist.">Wish List</a></li>
-                                        <li><a class="list-group-item list-group-item-action" href="../home/terms-and-conditions.">Customer Service</a></li>
-                                        <li><a class="list-group-item list-group-item-action" href="../home/terms-and-conditions.">Returns / Exchange</a></li>
-                                        <li><a class="list-group-item list-group-item-action" href="../home/faq.">FAQs</a></li>
-                                        <li><a class="list-group-item list-group-item-action" href="../home/terms-and-conditions.">Product Support</a></li>
+                                        <li><a class="list-group-item list-group-item-action" href="{% url 'terms' %}">Customer Service</a></li>
+                                        <li><a class="list-group-item list-group-item-action" href="{% url 'terms' %}">Returns / Exchange</a></li>
+                                        <li><a class="list-group-item list-group-item-action" href="{% url 'faq' %}">FAQs</a></li>
+                                        <li><a class="list-group-item list-group-item-action" href="{% url 'terms' %}">Product Support</a></li>
                                     </ul>
                                     <!-- End List Group -->
                                 </div>
