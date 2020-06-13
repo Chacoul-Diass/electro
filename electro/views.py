@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.models import User, auth
 
 # Create your views here.
 
@@ -12,7 +13,16 @@ def about (request):
     return render(request, 'pages/about.html')
 
 def contact (request):
-    return render(request, 'pages/contact-v1.html')
+
+    if request.method == 'POST':
+        nom = request.POST['nom']
+        prenom = request.POST['prenom']
+        sujet = request.POST['sujet']
+        message = request.POST['message']
+        
+    else:
+        return render(request, 'pages/contact-v1.html')
+
 
 def faq (request):
     return render(request, 'pages/faq.html')
