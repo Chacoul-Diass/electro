@@ -14,7 +14,7 @@ def account(request):
 def product_categorie(request):
 	return render(request, "shop/product-categorie.html")
 
-def shop-list(request):
+def shop_list(request):
 	return render(request, "shop/shop-list.html")
 
 def shop(request):
