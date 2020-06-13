@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'electro.apps.ElectroConfig',
+
+    #Appliction 
+    'shop.apps.ShopConfig',
     'blog.apps.BlogConfig',
 ]
 
