@@ -66,6 +66,8 @@ class ProductAdmin(admin.ModelAdmin):
 	list_display = (
 		'titre',
 		'prix',
+		'reduction',
+		'image',
 		'categorie',
 	)
 	list_filter = (
