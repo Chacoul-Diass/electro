@@ -31,16 +31,20 @@ class Auteur(models.Model):
 
 
 class Article(models.Model):
+
     titre = models.CharField(max_length=60)
     description = models.CharField(max_length=255)
     body = models.TextField()
-    auteur = models.ForeignKey(Auteur, on_delete=models.CASCADE())
+    categories = models.ManyToManyField('BlogCategory', related_name='categorieArticle')
+    auteur = models.ForeignKey('Auteur', on_delete=models.CASCADE, related_name='article_auteur')
     date_pub = models.DateTimeField(auto_now_add=True)
     date_mod = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to='blog/articles/images', null=True, blank=True)
 
+    status = models.BooleanField(default=True)
+
     class Meta:
-        verbose_name = 'Arcticle'
+        verbose_name = 'Article'
         verbose_name_plural = 'Articles'
 
     def __str__(self):
