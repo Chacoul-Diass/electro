@@ -2,6 +2,37 @@ from django.contrib import admin
 from shop import models 
 
 # Register your models here.
+
+class DepartementAdmin(admin.ModelAdmin):
+	list_display = (
+		'titre',
+		'status',
+		'date_cre',
+		'date_mod',
+	)
+	list_filter = (
+		'titre',
+		'status',
+	)
+	search_fields = (
+		'titre',
+	)
+	list_per_page = 10
+	fieldsets = [
+		('Info', {
+			'fields':[
+				'titre',
+			]
+		}),
+		('Status et Activation', {
+			'fields':[
+				'status',
+			]
+		})
+	]
+
+
+
 class CategoryAdmin(admin.ModelAdmin):
 	list_display = (
 		'titre',
@@ -65,5 +96,8 @@ def _register(model, admin_class):
 
 _register(models.Category, CategoryAdmin)
 _register(models.Product, ProductAdmin)
+
+# enregistrement model departement
+_register(models.Departement, DepartementAdmin)
 #_register(models.Article, ArticleAdmin)
 
