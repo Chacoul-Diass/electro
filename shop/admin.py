@@ -37,7 +37,9 @@ class CategoryAdmin(admin.ModelAdmin):
 	list_display = (
 		'titre',
 		'status',
+		'departement',
 		'date_cre',
+		'date_mod',
 	)
 	list_filter = (
 		'titre',
@@ -50,6 +52,7 @@ class CategoryAdmin(admin.ModelAdmin):
 		('Info', {
 			'fields':[
 				'titre',
+				'departement',
 			]
 		}),
 		('Status et Activation', {
@@ -63,6 +66,8 @@ class ProductAdmin(admin.ModelAdmin):
 	list_display = (
 		'titre',
 		'prix',
+		'reduction',
+		'image',
 		'categorie',
 	)
 	list_filter = (
