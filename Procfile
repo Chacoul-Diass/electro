@@ -1,0 +1,1 @@
+web: gunicorn electro.wsgi --log-file - --timeout 120
