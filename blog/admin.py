@@ -51,6 +51,40 @@ class AuteurAdmin(admin.ModelAdmin):
             'fields': [
                 'nom',
                 'description',
+                'photo',
+            ]
+        }),
+        ('Status et Activation', {
+            'fields': [
+                'status',
+            ]
+        })
+    ]
+
+
+class CommentaireAdmin(admin.ModelAdmin):
+    list_display = (
+        'auteur',
+        'article',
+        'date_pub',
+        'status',
+
+    )
+    list_filter = (
+        'article',
+        'date_pub',
+        'status',
+    )
+    search_fields = (
+        'article',
+    )
+    list_per_page = 10
+    fieldsets = [
+        ('Info commentaire', {
+            'fields': [
+                'auteur',
+                'article',
+                'body',
             ]
         }),
         ('Status et Activation', {
@@ -107,4 +141,5 @@ def _register(model, admin_class):
 
 _register(models.BlogCategory, BlogCategoryAdmin)
 _register(models.Auteur, AuteurAdmin)
+_register(models.Commentaire, CommentaireAdmin)
 _register(models.Article, ArticleAdmin)

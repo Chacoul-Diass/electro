@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='category',
             name='departement',
-            field=models.ForeignKey(default=django.utils.timezone.now, on_delete=django.db.models.deletion.CASCADE, related_name='departement', to='shop.Departement'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='departement', to='shop.Departement'),
             preserve_default=False,
         ),
     ]
