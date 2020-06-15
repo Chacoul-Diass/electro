@@ -1,10 +1,17 @@
 from django.shortcuts import render
 from . import models
-
+from django.core.paginator import Paginator
 # Create your views here.
 
 # lien → {% url 'shop:home' %}
 def shop(request):
+
+	productList = models.Product.objects.all()
+	paginator = Paginator(productList, 10) # affiche 10 produits per page
+
+	page = request.GET.get('page')
+	produits = paginator.get_page(page)
+
 	data = {
 	# tous les departements
 	'departements':models.Departement.objects.all(),
@@ -15,8 +22,15 @@ def shop(request):
 	'recomProds':models.Product.objects.filter(recommande=True).reverse()[:10],
 
 	'nbArticles':models.Product.objects.count(),
+	
+	'products' : models.Product.objects.all()
 	}
-	return render(request, "shop/shop.html",data)
+
+	return render(request, "shop/shop.html",data,produits)
+
+
+
+
 
 # lien → {% url 'shop:single-product' %}
 def single_product(request):
