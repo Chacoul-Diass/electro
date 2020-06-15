@@ -13,6 +13,8 @@ def shop(request):
 	'latestProds':models.Product.objects.reverse()[:5],
 
 	'recomProds':models.Product.objects.filter(recommande=True).reverse()[:10],
+
+	'nbArticles':models.Product.objects.count(),
 	}
 	return render(request, "shop/shop.html",data)
 
