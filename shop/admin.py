@@ -69,6 +69,8 @@ class ProductAdmin(admin.ModelAdmin):
 		'reduction',
 		'image',
 		'categorie',
+		'status',
+		'recommande',
 	)
 	list_filter = (
 		'categorie',
@@ -85,11 +87,15 @@ class ProductAdmin(admin.ModelAdmin):
 				'reduction',
 				'image',
 				'categorie',
+				'description',
+
+
 			]
 		}),
 
 		('Status et Activation', {
 			'fields':[
+				'recommande',
 				'status',
 			]
 		})

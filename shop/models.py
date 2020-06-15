@@ -42,6 +42,8 @@ class Product(models.Model):
 	reduction = models.FloatField(blank=True)
 	categorie = models.ForeignKey(Category, on_delete=models.CASCADE, related_name = 'categorie')
 	status = models.BooleanField(default=True)
+	recommande = models.BooleanField(default=False)
+	description = models.TextField(default='Aucune description')
 
 
 	date_cre = models.DateTimeField(auto_now_add=True)

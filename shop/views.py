@@ -11,6 +11,8 @@ def shop(request):
 
 	# les 5 derniers produits en ordre decroissant de id
 	'latestProds':models.Product.objects.reverse()[:5],
+
+	'recomProds':models.Product.objects.filter(recommande=True).reverse()[:10],
 	}
 	return render(request, "shop/shop.html",data)
 
