@@ -22,7 +22,7 @@ def shop(request):
 	'recomProds':models.Product.objects.filter(recommande=True).reverse()[:10],
 
 	'nbArticles':models.Product.objects.count(),
-	
+
 	'products' : models.Product.objects.all()
 	}
 
@@ -30,11 +30,16 @@ def shop(request):
 
 
 
-
-
 # lien → {% url 'shop:single-product' %}
-def single_product(request):
-	return render(request, "shop/single-product-fullwidth.html")
+def single_product(request, id):
+
+	data = {
+		'article': models.Product.objects.get(id=id),
+		# 'recents': models.Article.objects.filter(date_pub__gte=date),
+		# 'comment': models.Commentaire.objects.filter(article_id=id).filter(status=True)
+	}
+
+	return render(request, "shop/single-product-fullwidth.html",data)
 
 # lien → {% url 'shop:product-categorie' %}
 def product_categorie(request):
