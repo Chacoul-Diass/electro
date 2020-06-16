@@ -38,32 +38,57 @@ def single_product(request, id):
 
 	data = {
 		'article': models.Product.objects.get(id=id),
-		# 'recents': models.Article.objects.filter(date_pub__gte=date),
-		# 'comment': models.Commentaire.objects.filter(article_id=id).filter(status=True)
+
+		'info':Info.objects.first(),
 	}
 
 	return render(request, "shop/single-product-fullwidth.html",data)
 
 # lien → {% url 'shop:product-categorie' %}
 def product_categorie(request):
-	return render(request, "shop/product-categorie.html")
+	data = {
+        'info':Info.objects.first(),
+    }
+	return render(request, "shop/product-categorie.html",data)
 
 
 
 
 def cart(request):
-	return render(request, "shop/cart.html")
+	data = {
+        'info':Info.objects.first(),
+    }
+	return render(request, "shop/cart.html",data)
+
+
 
 def checkout(request):
-	return render(request, "shop/checkout.html")
+	data = {
+        'info':Info.objects.first(),
+    }
+	return render(request, "shop/checkout.html",data)
+
+
 
 def account(request):
-	return render(request, "shop/my-account.html")
+	data = {
+        'info':Info.objects.first(),
+    }
+	return render(request, "shop/my-account.html",data)
+
+
 
 def shop_list(request):
-	return render(request, "shop/shop-list.html")
+	data = {
+        'info':Info.objects.first(),
+    }
+	return render(request, "shop/shop-list.html",data)
+
 
 
 def wishlist(request):
-	return render(request, "shop/single-product.html")
+	data = {
+        'info':Info.objects.first(),
+    }
+	return render(request, "shop/single-product.html",data)
 

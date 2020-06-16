@@ -3,6 +3,8 @@ import datetime
 # from django.utils import timezone
 from blog import models
 from django.http import  HttpResponse
+from electro.models import Info
+
 # Create your views here.
 
 def index(request):
@@ -10,6 +12,7 @@ def index(request):
     # start_week = date - datetime.timedelta(date.weekday())
     # end_week = start_week + datetime.timedelta(7)
     data = {
+        'info':Info.objects.first(),
         'categories': models.BlogCategory.objects.all(),
         'articles': models.Article.objects.order_by('date_pub'),
         'recents': models.Article.objects.filter(date_pub__gte=date),
@@ -20,6 +23,7 @@ def index(request):
 def single_post(request, id):
     date = datetime.date.today()
     data = {
+        'info':Info.objects.first(),
         'article': models.Article.objects.get(id=id),
         'recents': models.Article.objects.filter(date_pub__gte=date),
         'comment': models.Commentaire.objects.filter(article_id=id).filter(status=True)
