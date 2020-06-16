@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . import models
+from electro.models import Info
 from django.core.paginator import Paginator
 # Create your views here.
 
@@ -23,7 +24,9 @@ def shop(request):
 
 	'nbArticles':models.Product.objects.count(),
 
-	'products' : models.Product.objects.all()
+	'products' : models.Product.objects.all(),
+
+	'info':Info.objects.first(),
 	}
 
 	return render(request, "shop/shop.html",data,produits)
