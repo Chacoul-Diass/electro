@@ -25,7 +25,7 @@ SECRET_KEY = '%a9kj-um)56d-^x%gzf62q*@5_9=#5rhq98bih7n=6wi037px1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['electro-nan.herokuapp.com']
+ALLOWED_HOSTS = ['electro-nan.herokuapp.com', '127.0.0.1']
 
 
 
@@ -89,10 +89,10 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd4gge5l32afvui',
-        'USER': 'erboodeugrcymj',
-        'PASSWORD': 'e172bbbd3f356aaa011137b756b167b9953116277d0ead58ad10e09ccad960e2',
-        'HOST': 'ec2-54-247-78-30.eu-west-1.compute.amazonaws.com',
+        'NAME': 'dc9sle99d1lr3c',
+        'USER': 'ifnpyizkqrquyk',
+        'PASSWORD': '9021f8c830ef9a4836efadbb5413a5dde4859731f399712b69cf36e9917110d3',
+        'HOST': 'ec2-54-246-115-40.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
     
