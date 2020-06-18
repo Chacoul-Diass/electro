@@ -36,13 +36,13 @@
                                         <div class="list-group list-group-horizontal flex-wrap list-group-borderless align-items-center mx-n0dot5">
                                             {% for category in article.categories.all %}
                                                 {% if forloop.last %}
-                                            <a href="../blog/single-blog-post.html" class="mx-0dot5 text-gray-5">{{ category }}</a>
+                                            <a href="#" class="mx-0dot5 text-gray-5">{{ category }}</a>
                                                     {% else %}
-                                            <a href="../blog/single-blog-post.html" class="mx-0dot5 text-gray-5">{{ category }},</a>
+                                            <a href="#" class="mx-0dot5 text-gray-5">{{ category }},</a>
                                                 {% endif %}
                                             {% endfor %}
                                             <span class="mx-2 font-size-n5 mt-1 text-gray-5"><i class="fas fa-circle"></i></span>
-                                            <a href="../blog/single-blog-post.html" class="mx-0dot5 text-gray-5">{{ article.date_pub.date }}</a>
+                                            <a href="#" class="mx-0dot5 text-gray-5">{{ article.date_pub.date }}</a>
                                         </div>
                                     </div>
                                     <p><strong>{{ article.description }}.</strong></p>
@@ -59,7 +59,7 @@
                                         <img class="img-fluid" src="{% if article.auteur.photo %}{{ article.auteur.photo.url }}{% else %}{% static 'img/100X100/img17.jpg' %}{% endif %}" alt="Image Description">
                                     </div>
                                     <div class="media-body">
-                                        <h3 class="font-size-18 mb-3"><a href="../blog/single-blog-post.html">{{ article.auteur }}</a></h3>
+                                        <h3 class="font-size-18 mb-3"><a href="#">{{ article.auteur }}</a></h3>
                                         <p class="mb-0">{{ article.auteur.description }}</p>
                                     </div>
                                 </div>
@@ -83,8 +83,8 @@
                                             <div class="media-body">
                                                 <p>{{ commentaire }}</p>
                                                 <div class="d-flex">
-                                                    <h4 class="font-size-14 font-weight-bold mr-2"><a href="../blog/single-blog-post.html" class="">{{ commentaire.auteur }}</a></h4>
-                                                    <span><a href="../blog/single-blog-post.html" class="text-gray-23">{{ commentaire.date_pub }}</a></span>
+                                                    <h4 class="font-size-14 font-weight-bold mr-2"><a href="#" class="">{{ commentaire.auteur }}</a></h4>
+                                                    <span><a href="#" class="text-gray-23">{{ commentaire.date_pub }}</a></span>
 {#                                                    <a href="#" class="text-blue ml-auto">Reply</a>#}
                                                 </div>
                                             </div>
@@ -211,7 +211,7 @@
                             {% endfor %}
                             {% else %}
                             <div class="media-body">
-                                <h4 class="font-size-14 mb-1"><a href="../blog/single-blog-post.html" class="text-gray-39">Pas d'article publié aujourd'hui.</a></h4>
+                                <h4 class="font-size-14 mb-1"><a href="#" class="text-gray-39">Pas d'article publié aujourd'hui.</a></h4>
                             </div>
                         {% endif %}
 
