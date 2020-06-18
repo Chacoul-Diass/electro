@@ -122,6 +122,11 @@ class ArticleAdmin(admin.ModelAdmin):
                 'auteur',
             ]
         }),
+        ('Contenu de Article', {
+            'fields': [
+                'body',
+            ]
+        }),
         ('Image', {
             'fields': [
                 'image',
