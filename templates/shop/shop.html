@@ -65,7 +65,7 @@
                                             </div>
                                             <div class="col">
                                                 <h3 class="text-lh-1dot2 font-size-14 mb-0">
-                                                    <a href="#">{{lastProd.titre}}</a>
+                                                    <a href="{% url 'shop:single-product' lastProd.id %}">{{lastProd.titre}}</a>
                                                 </h3>
                                                 <div class="text-warning text-ls-n2 font-size-16 mb-1" style="width: 80px;">
                                                     <small class="fas fa-star"></small>
@@ -252,10 +252,10 @@
                                         <div class="product-item__outer h-100">
                                             <div class="product-item__inner px-xl-4 p-3">
                                                 <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="#" class="font-size-12 text-gray-5">{{product.categorie.titre}}</a></div>
+                                                    <div class="mb-2"><a href="url 'shop:single-product' product.id %}" class="font-size-12 text-gray-5">{{product.categorie.titre}}</a></div>
                                                     <h5 class="mb-1 product-item__title"><a href="#" class="text-blue font-weight-bold">{{product.titre}}</a></h5>
                                                     <div class="mb-2">
-                                                        <a href="#" class="d-block text-center"><img class="img-fluid" src="{{ product.image.url}}" alt="{{product.titre}}"></a>
+                                                        <a href="{% url 'shop:single-product' product.id %}" class="d-block text-center"><img class="img-fluid" src="{{ product.image.url}}" alt="{{product.titre}}"></a>
                                                     </div>
                                                     <div class="flex-center-between mb-1">
                                                         <div class="prodcut-price">
@@ -292,10 +292,10 @@
                                         <div class="product-item__outer h-100">
                                             <div class="product-item__inner px-xl-4 p-3">
                                                 <div class="product-item__body pb-xl-2">
-                                                    <div class="mb-2"><a href="#" class="font-size-12 text-gray-5">{{product.categorie.titre}}</a></div>
-                                                    <h5 class="mb-1 product-item__title"><a href="#" class="text-blue font-weight-bold">{{product.titre}}</a></h5>
+                                                    <div class="mb-2"><a href="{% url 'shop:single-product' product.id %}" class="font-size-12 text-gray-5">{{product.categorie.titre}}</a></div>
+                                                    <h5 class="mb-1 product-item__title"><a href="{% url 'shop:single-product' product.id %}" class="text-blue font-weight-bold">{{product.titre}}</a></h5>
                                                     <div class="mb-2">
-                                                        <a href="#" class="d-block text-center"><img class="img-fluid" src="{{product.image.url}}" alt="{{product.titre}}"></a>
+                                                        <a href="{% url 'shop:single-product' product.id %}" class="d-block text-center"><img class="img-fluid" src="{{product.image.url}}" alt="{{product.titre}}"></a>
                                                     </div>
                                                     <div class="mb-3">
                                                         <a class="d-inline-flex align-items-center small font-size-14" href="#">
@@ -345,13 +345,13 @@
                                             <div class="product-item__inner remove-prodcut-hover py-4 row">
                                                 <div class="product-item__header col-6 col-md-4">
                                                     <div class="mb-2">
-                                                        <a href="#" class="d-block text-center"><img class="img-fluid" src="{{ product.image.url }}" alt="Image Description"></a>
+                                                        <a href="{% url 'shop:single-product' product.id %}" class="d-block text-center"><img class="img-fluid" src="{{ product.image.url }}" alt="Image Description"></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-item__body col-6 col-md-5">
                                                     <div class="pr-lg-10">
-                                                        <div class="mb-2"><a href="#" class="font-size-12 text-gray-5">{{ product.categorie.titre }}</a></div>
-                                                        <h5 class="mb-2 product-item__title"><a href="#" class="text-blue font-weight-bold">{{ product.titre }}</a></h5>
+                                                        <div class="mb-2"><a href="{% url 'shop:single-product' product.id %}" class="font-size-12 text-gray-5">{{ product.categorie.titre }}</a></div>
+                                                        <h5 class="mb-2 product-item__title"><a href="{% url 'shop:single-product' product.id %}" class="text-blue font-weight-bold">{{ product.titre }}</a></h5>
                                                         <div class="prodcut-price mb-2 d-md-none">
                                                             <div class="text-gray-100">{{ product.reduction }}F CFA</div>
                                                         </div>
@@ -404,13 +404,13 @@
                                             <div class="product-item__inner remove-prodcut-hover py-4 row">
                                                 <div class="product-item__header col-6 col-md-2">
                                                     <div class="mb-2">
-                                                        <a href="#" class="d-block text-center"><img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.titre }}"></a>
+                                                        <a href="{% url 'shop:single-product' product.id %}" class="d-block text-center"><img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.titre }}"></a>
                                                     </div>
                                                 </div>
                                                 <div class="product-item__body col-6 col-md-7">
                                                     <div class="pr-lg-10">
-                                                        <div class="mb-2"><a href="#" class="font-size-12 text-gray-5">{{ product.caegorie.titre }}</a></div>
-                                                        <h5 class="mb-2 product-item__title"><a href="#" class="text-blue font-weight-bold">{{ product.titre }}</a></h5>
+                                                        <div class="mb-2"><a href="{% url 'shop:single-product' product.id %}" class="font-size-12 text-gray-5">{{ product.caegorie.titre }}</a></div>
+                                                        <h5 class="mb-2 product-item__title"><a href="{% url 'shop:single-product' product.id %}" class="text-blue font-weight-bold">{{ product.titre }}</a></h5>
                                                         <div class="prodcut-price d-md-none">
                                                             <div class="text-gray-100">{{ product.reduction }}</div>
                                                         </div>
